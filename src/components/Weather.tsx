@@ -108,8 +108,7 @@ const Weather = () => {
                 return;
             }
 
-            // Process data to get daily forecast
-            const dailyForecast = data.list.filter((_item: any, index: number) => index % 8 === 0); // Every 8th entry is a new day
+            const dailyForecast = data.list.filter((_item: any, index: number) => index % 8 === 0);
             setForecastData(dailyForecast);
         } catch (error) {
             console.error("Error fetching forecast data:", error);
@@ -126,12 +125,12 @@ const Weather = () => {
                 },
                 () => {
                     alert("Failed to retrieve your location.");
-                    fetchData("London"); // Default city if location fails
+                    fetchData("London");
                 }
             )
         } else {
             alert("Geolocation is not supported by this browser.");
-            fetchData("London"); // Default city if geolocation is not supported
+            fetchData("London");
         }
     }
 
@@ -146,8 +145,8 @@ const Weather = () => {
 
         setWeatherData({
             ...weatherData,
-            temp: Math.round(newTemp), // Set the new temperature value
-            unit: newUnit, // Update the unit state
+            temp: Math.round(newTemp),
+            unit: newUnit,
         });
     };
 
@@ -206,7 +205,7 @@ const Weather = () => {
                         <h3>5-Day Forecast</h3>
                         <div className="forecast-items">
                             {forecastData.map((item, index) => {
-                                const date = new Date(item.dt * 1000); // Convert from Unix timestamp
+                                const date = new Date(item.dt * 1000);
                                 const day = date.toLocaleDateString('en-US', { weekday: 'short' });
                                 const temp = weatherData?.unit === 'C' ? item.main.temp : (item.main.temp * 9) / 5 + 32;
                                 return (
