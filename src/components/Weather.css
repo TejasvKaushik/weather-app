@@ -1,0 +1,127 @@
+.weather{
+    place-self: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #FFCCE1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-bar input{
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 25px;
+    color: #000;
+    background: white;
+    font-size: large;
+}
+
+.search-icon{
+    cursor: pointer;
+}
+
+.toggle-button{
+    background: none;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment of icon and text */
+}  
+
+.weather-icon{
+    width: 150px;
+    margin: 30px;
+}
+
+.temp{
+    font-size: 40px;
+}
+
+.weather-data{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.weather-data col{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 22px;
+}
+
+.weather-data .col span{
+    display: block;
+    font-size: 16px;
+}
+
+.weather-data .col img{
+    width: 20px;
+    margin: 10px;
+}
+
+.place {
+    font-size: xx-large;
+}
+
+.forecast {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E195AB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast h3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forecast-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.forecast-item {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-item p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.forecast-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
